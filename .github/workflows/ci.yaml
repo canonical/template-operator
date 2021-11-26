@@ -34,30 +34,9 @@ jobs:
           provider: microk8s
       - name: Run integration tests
         run: tox -e integration
-        
-      # On failure, capture debugging resources
-      - name: Get all
-        run: kubectl get all -A
+      - name: Dump logs
+        uses: canonical/charm-logdump-action@main
         if: failure()
-
-      - name: Describe deployments
-        run: kubectl describe deployments -A
-        if: failure()
-
-      - name: Describe replicasets
-        run: kubectl describe replicasets -A
-        if: failure()
-
-      - name: Get juju status
-        run: juju status --relations --storage
-        if: failure()
-
-      - name: Get application logs
-        # TEMPLATE-TODO: Replace the application name
-        run: kubectl logs -n testing --tail 1000 -lapp.kubernetes.io/name=operator-template
-        if: failure()
-
-      - name: Get application operator logs
-        # TEMPLATE-TODO: Replace the application name
-        run: kubectl logs -n testing --tail 1000 -loperator.juju.is/name=operator-template
-        if: failure()
+        with:
+          # TEMPLATE-TODO: Replace the application name
+          app: operator-template
