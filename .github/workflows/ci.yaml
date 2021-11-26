@@ -53,9 +53,11 @@ jobs:
         if: failure()
 
       - name: Get application logs
+        # TEMPLATE-TODO: Replace the application name
         run: kubectl logs -n testing --tail 1000 -lapp.kubernetes.io/name=operator-template
         if: failure()
 
       - name: Get application operator logs
+        # TEMPLATE-TODO: Replace the application name
         run: kubectl logs -n testing --tail 1000 -loperator.juju.is/name=operator-template
         if: failure()
