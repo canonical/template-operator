@@ -18,6 +18,9 @@ TODO: Include a link to the default image your charm uses
 
 ## Contributing
 
-Please see the [Juju SDK docs](https://juju.is/docs/sdk) for guidelines
-on enhancements to this charm following best practice guidelines, and
-[CONTRIBUTING.md](./CONTRIBUTING.md) for developer guidance.
+<!-- TEMPLATE-TODO: Change this URL to be the full Github path to CONTRIBUTING.md-->
+
+Please see the [Juju SDK docs](https://juju.is/docs/sdk) for guidelines on enhancements to this
+charm following best practice guidelines, and
+[CONTRIBUTING.md](https://github.com/<name>/<operator>/blob/main/CONTRIBUTING.md) for developer
+guidance.
