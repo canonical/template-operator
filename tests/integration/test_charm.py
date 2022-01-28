@@ -32,10 +32,10 @@ async def test_build_and_deploy(ops_test: OpsTest):
     await ops_test.model.set_config({"update-status-hook-interval": "10s"})
 
     await ops_test.model.wait_for_idle(
-        apps=[APP_NAME], 
-        status="active", 
-        raise_on_blocked=True, 
-        timeout=1000
+        apps=[APP_NAME],
+        status="active",
+        raise_on_blocked=True,
+        timeout=1000,
     )
     assert ops_test.model.applications[APP_NAME].units[0].workload_status == "active"
 

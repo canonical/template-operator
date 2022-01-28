@@ -60,7 +60,7 @@ class OperatorTemplateCharm(CharmBase):
                 }
             },
         }
-        # Add intial Pebble config layer using the Pebble API
+        # Add initial Pebble config layer using the Pebble API
         container.add_layer("httpbin", pebble_layer, combine=True)
         # Autostart any services that were defined with startup: enabled
         container.autostart()
