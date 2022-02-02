@@ -61,3 +61,9 @@ juju model-config logging-config="<root>=INFO;unit=DEBUG"
 juju deploy ./template-operator_ubuntu-20.04-amd64.charm \
     --resource httpbin-image=kennethreitz/httpbin \
 ```
+
+## Canonical Contributor Agreement
+
+<!-- TEMPLATE-TODO: Update the description with the name of charm-->
+
+Canonical welcomes contributions to the Charmed Template Operator. Please check out our [contributor agreement](https://ubuntu.com/legal/contributors) if you're interested in contributing to the solution.
