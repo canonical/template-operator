@@ -4,8 +4,6 @@
 # For a complete list of supported options, see:
 # https://juju.is/docs/sdk/metadata-reference
 name: template-operator
-display-name: |
-  TEMPLATE-TODO: fill out a display name for the Charmcraft store
 description: |
   TEMPLATE-TODO: fill out the charm's description
 summary: |
