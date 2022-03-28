@@ -6,7 +6,6 @@ Dummy charm for testing github actions
 
 ## Usage
 
-TODO: Provide high-level usage, such as required config or relations
 
 ## OCI Images
 
