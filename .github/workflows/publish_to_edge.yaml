@@ -1,0 +1,27 @@
+name: Publish to latest/edge
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - track/**
+  pull_request:
+    branches:
+      - master
+      - main
+      - track/**
+
+jobs:
+  publish-charm:
+    name: Publish Charm
+    runs-on: ubuntu-latest
+    # Only publish to charmhub if we are pushing to a special branch or running PRs from something named `branch/*`
+    if: (github.event_name == 'push') ||  (startsWith( github.head_ref, 'branch/' ))
+    steps:
+      - uses: actions/checkout@v2
+      - uses: canonical/charmhub-upload-action@0.2.0
+        with:
+          credentials: ${{ secrets.CHARMCRAFT_CREDENTIALS }}
+          charm-path: ./
+          charmcraft-channel: latest/edge
