@@ -5,16 +5,14 @@
 # https://juju.is/docs/sdk/metadata-reference
 name: natasha-dummy-charm
 description: |
-  TEMPLATE-TODO: fill out the charm's description
+  dummy charm with httpbin
 summary: |
-  TEMPLATE-TODO: fill out the charm's summary
+  dummy charm with httpbin
 
-# TEMPLATE-TODO: replace with containers for your workload (delete for non-k8s)
 containers:
   httpbin:
     resource: httpbin-image
 
-# TEMPLATE-TODO: each container defined above must specify an oci-image resource
 resources:
   httpbin-image:
     type: oci-image
