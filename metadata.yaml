@@ -3,7 +3,7 @@
 
 # For a complete list of supported options, see:
 # https://juju.is/docs/sdk/metadata-reference
-name: template-operator
+name: natasha-dummy-charm
 description: |
   TEMPLATE-TODO: fill out the charm's description
 summary: |
