@@ -1,4 +1,4 @@
-name: Publish to edge
+name: Test and publish to edge
 
 on:
   push:
