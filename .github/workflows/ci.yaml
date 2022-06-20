@@ -1,9 +1,6 @@
 name: Tests
 on:
   workflow_call:
-    secrets:
-      charmhub-token:
-        required: true
 
 jobs:
   lint:
