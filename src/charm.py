@@ -101,4 +101,4 @@ class OperatorTemplateCharm(CharmBase):
 
 
 if __name__ == "__main__":
-    main(OperatorTemplateCharm)
+    main(OperatorTemplateCharm, use_juju_for_storage=True)
