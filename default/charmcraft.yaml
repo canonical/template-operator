@@ -1,5 +1,5 @@
-# Copyright 2022 Canonical Ltd.
-# See LICENSE file for licensing details.
+# This file configures Charmcraft.
+# See https://juju.is/docs/sdk/charmcraft-config for guidance.
 
 type: charm
 bases:
