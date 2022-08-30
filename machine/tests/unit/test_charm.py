@@ -3,7 +3,6 @@
 
 import unittest
 
-from ops.model import ActiveStatus
 from ops.testing import Harness
 
 from charm import {{ class_name }}
@@ -15,8 +14,3 @@ class TestCharm(unittest.TestCase):
         self.addCleanup(self.harness.cleanup)
         self.harness.begin()
     
-    def test_pebble_ready(self):
-        # Simulate the container coming up and emission of pebble-ready event
-        self.harness.container_pebble_ready("some-container")
-        # Ensure we set an ActiveStatus with no message
-        self.assertEqual(self.harness.model.unit.status, ActiveStatus())

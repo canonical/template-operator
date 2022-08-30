@@ -30,12 +30,14 @@ containers:
   httpbin:
     resource: httpbin
 
-# This file populates the Resources tab on Charmhub.
-
+# This field populates the Resources tab on Charmhub.
 resources:
   # An OCI image resource for each container listed above.
+  # You may remove this if your charm will run without a workload sidecar container.
   httpbin-image:
     type: oci-image
     description: OCI image for httpbin
-    # Included for simplicity in integration tests
+    # The upstream-source field is ignored by Juju. It is included here as a reference
+    # so the integration testing suite knows which image to deploy during testing. This field
+    # is also used by the 'canonical/charming-actions' Github action for automated releasing.
     upstream-source: kennethreitz/httpbin

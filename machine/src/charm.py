@@ -18,10 +18,10 @@ class {{ class_name }}(CharmBase):
 
     def __init__(self, *args):
         super().__init__(*args)
-        self.framework.observe(self.on.some_container_pebble_ready, self._on_pebble_ready)
+        self.framework.observe(self.on.start, self._on_start)
 
-    def _on_pebble_ready(self, event):
-        """Handle pebble-ready event."""
+    def _on_start(self, event):
+        """Handle start event."""
         self.unit.status = ActiveStatus()
 
 if __name__ == "__main__":  # pragma: nocover
