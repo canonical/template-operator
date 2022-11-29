@@ -26,7 +26,7 @@ this operator.
 You can create an environment for development with `tox`:
 
 ```shell
-tox --devenv venv unit
+tox --devenv venv -e unit
 source venv/bin/activate
 ```
 
