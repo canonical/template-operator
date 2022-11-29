@@ -23,11 +23,11 @@ this operator.
 
 ## Developing
 
-You can use the environments created by `tox` for development:
+You can create an environment for development with `tox`:
 
 ```shell
-tox --notest -e unit
-source .tox/unit/bin/activate
+tox --devenv venv unit
+source venv/bin/activate
 ```
 
 ### Testing
