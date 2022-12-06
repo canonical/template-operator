@@ -3,6 +3,21 @@ on:
   workflow_call:
 
 jobs:
+  lib-check:
+    name: Check libraries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Check libs
+        uses: canonical/charming-actions/check-libraries@2.1.1
+        with:
+          # TEMPLATE-TODO: Configure GH secrets
+          credentials: "${{ secrets.CHARMHUB_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -28,6 +43,7 @@ jobs:
   integration-test-microk8s:
     name: Integration tests (microk8s)
     needs:
+      - lib-check
       - lint
       - unit-test
     runs-on: ubuntu-latest
