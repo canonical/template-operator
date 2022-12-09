@@ -6,8 +6,9 @@ body:
     attributes:
       value: >
         Thanks for taking the time to fill out this bug report! Before submitting your issue, please make
-        sure you are using the latest version of the charm. If not, please switch to this image prior to 
+        sure you are using the latest version of the charm. If not, please switch to this image prior to
         posting your report to make sure it's not already solved.
+
   - type: textarea
     id: bug-description
     attributes:
@@ -16,6 +17,7 @@ body:
         If applicable, add screenshots to help explain the problem you are facing.
     validations:
       required: true
+
   - type: textarea
     id: reproduction
     attributes:
@@ -28,6 +30,7 @@ body:
         3. `juju status --relations`
     validations:
       required: true
+
   - type: textarea
     id: environment
     attributes:
@@ -39,17 +42,19 @@ body:
         - Version of any applicable components, like the juju snap, the model controller, lxd, microk8s, and/or multipass.
     validations:
       required: true
+
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: >
         Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-        Fetch the logs using `juju debug-log --replay` and `kubectl logs ...`. Additional details available in the juju docs 
+        Fetch the logs using `juju debug-log --replay` and `kubectl logs ...`. Additional details available in the juju docs
         at https://juju.is/docs/olm/juju-logs
       render: shell
     validations:
       required: true
+
   - type: textarea
     id: additional-context
     attributes:
