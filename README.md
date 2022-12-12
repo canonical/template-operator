@@ -1,26 +1,8 @@
-# operator-template
+# This repo/template is archived.
 
-## Description
+The initial purpose of this template was to test out possible alternatives to the `charmcraft init`
+defaults. Since this [PR](https://github.com/canonical/charmcraft/pull/932), the `charmcraft init`
+now supports 3 different profiles, all of which come with the same directory structure/layout as
+this template.
 
-TODO: Describe your charm in a few paragraphs of Markdown
-
-## Usage
-
-TODO: Provide high-level usage, such as required config or relations
-
-## Relations
-
-TODO: Provide any relations which are provided or required by your charm
-
-## OCI Images
-
-TODO: Include a link to the default image your charm uses
-
-## Contributing
-
-<!-- TEMPLATE-TODO: Change this URL to be the full Github path to CONTRIBUTING.md-->
-
-Please see the [Juju SDK docs](https://juju.is/docs/sdk) for guidelines on enhancements to this
-charm following best practice guidelines, and
-[CONTRIBUTING.md](https://github.com/<name>/<operator>/blob/main/CONTRIBUTING.md) for developer
-guidance.
+Please use that in the future, and file any issues at https://github.com/canonical/charmcraft/issues/
