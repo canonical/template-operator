@@ -6,10 +6,9 @@
 import unittest
 from unittest.mock import Mock
 
+from charm import OperatorTemplateCharm
 from ops.model import ActiveStatus
 from ops.testing import Harness
-
-from charm import OperatorTemplateCharm
 
 
 class TestCharm(unittest.TestCase):
